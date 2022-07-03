@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katia Player One</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monofett&family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="">
+    <div class="wrapper">
+        <header>
+            <h1 class="header_title" onclick="window.location.href = 'index.html'">KATIA PLAYER ONE</h1>
+            <p>Tu fuente de conocimiento de videojuegos</p>
+        </header>
+
+        <div class="mobile-menu">
+            <nav>
+                <a class="sidebar_link" id="sidebar_link_index_mobile" href="index.html">Inicio</a>
+                <a class="sidebar_link" href="favorites.html">Favoritos</a>
+                <a class="sidebar_link_selected" href="aboutus.html">Acerca de</a>
+                <a class="sidebar_link" id="sidebar_link_filters_mobile" href="#" onclick="toggleFilters()">Filtros</a>
+
+                <div class="sibedar_filters" id="sidebar_filters_mobile">
+                    <p class="sidebar_filters_title">Plataformas</p>
+                    <a class="sidebar_link_mini filter_4" href="index.html?filter=platform&filterId=4">PC</a>
+                    <a class="sidebar_link_mini filter_7" href="index.html?filter=platform&filterId=7">Nintendo Switch</a>
+                    <a class="sidebar_link_mini filter_18" href="index.html?filter=platform&filterId=18">PlayStation 4</a>
+                    <a class="sidebar_link_mini filter_1" href="index.html?filter=platform&filterId=1">Xbox One</a>
+                    <a class="sidebar_link_mini filter_21" href="index.html?filter=platform&filterId=21">Android</a>
+                    <a class="sidebar_link_mini filter_3" href="index.html?filter=platform&filterId=3">iOS</a>
+                    <p class="sidebar_filters_title">Géneros</p>
+                    <a class="sidebar_link_mini filter_action" href="index.html?filter=genre&filterId=action">Acción</a>
+                    <a class="sidebar_link_mini filter_strategy" href="index.html?filter=genre&filterId=strategy">Estrategia</a>
+                    <a class="sidebar_link_mini filter_role-playing-games-rpg" href="index.html?filter=genre&filterId=role-playing-games-rpg">RPG</a>
+                    <a class="sidebar_link_mini filter_shooter" href="index.html?filter=genre&filterId=shooter">Shooter</a>
+                    <a class="sidebar_link_mini filter_adventure" href="index.html?filter=genre&filterId=adventure">Aventura</a>
+                    <a class="sidebar_link_mini filter_puzzle" href="index.html?filter=genre&filterId=puzzle">Puzzle</a>
+                    <a class="sidebar_link_mini filter_racing" href="index.html?filter=genre&filterId=racing">Conducción</a>
+                    <a class="sidebar_link_mini filter_sports" href="index.html?filter=genre&filterId=sports">Deportes</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="central">
+            <aside>
+                <nav>
+                    <a class="sidebar_link" href="index.html">Inicio</a>
+                    <a class="sidebar_link" href="favorites.html">Favoritos</a>
+                    <a class="sidebar_link_selected" href="aboutus.html">Acerca de</a>
+                    <a class="sidebar_link" href="#" onclick="toggleFilters()">Filtros</a>
+                    <div class="sibedar_filters" id="sidebar_filters">
+                        <p class="sidebar_filters_title">Plataformas</p>
+                        <a class="sidebar_link_mini" id="filter_4" href="index.html?filter=platform&filterId=4">PC</a>
+                        <a class="sidebar_link_mini" id="filter_7" href="index.html?filter=platform&filterId=7">Nintendo Switch</a>
+                        <a class="sidebar_link_mini" id="filter_18" href="index.html?filter=platform&filterId=18">PlayStation 4</a>
+                        <a class="sidebar_link_mini" id="filter_1" href="index.html?filter=platform&filterId=1">Xbox One</a>
+                        <a class="sidebar_link_mini" id="filter_21" href="index.html?filter=platform&filterId=21">Android</a>
+                        <a class="sidebar_link_mini" id="filter_3" href="index.html?filter=platform&filterId=3">iOS</a>
+                        <p class="sidebar_filters_title">Géneros</p>
+                        <a class="sidebar_link_mini" id="filter_action" href="index.html?filter=genre&filterId=action">Acción</a>
+                        <a class="sidebar_link_mini" id="filter_strategy" href="index.html?filter=genre&filterId=strategy">Estrategia</a>
+                        <a class="sidebar_link_mini" id="filter_role-playing-games-rpg" href="index.html?filter=genre&filterId=role-playing-games-rpg">RPG</a>
+                        <a class="sidebar_link_mini" id="filter_shooter" href="index.html?filter=genre&filterId=shooter">Shooter</a>
+                        <a class="sidebar_link_mini" id="filter_adventure" href="index.html?filter=genre&filterId=adventure">Aventura</a>
+                        <a class="sidebar_link_mini" id="filter_puzzle" href="index.html?filter=genre&filterId=puzzle">Puzzle</a>
+                        <a class="sidebar_link_mini" id="filter_racing" href="index.html?filter=genre&filterId=racing">Conducción</a>
+                        <a class="sidebar_link_mini" id="filter_sports" href="index.html?filter=genre&filterId=sports">Deportes</a>
+                    </div>
+                    
+                </nav>
+            </aside>
+
+            <main>
+                <div class="about_us">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Soy Katia, una alumna del máster de CICE Desarrollo Web Full Stack, y este es un proyecto
+                        para demostrar que he aprendido todo el html, css y javascript que debería.</p>
+                    <h2>¿Puedes explicar lo que es esta web?</h2>
+                    <p>El proyecto consiste en utilizar una API gratuita cualquiera para obtener datos mediante
+                        la función <i>fetch</i>, mostrar dichos datos en pantalla, y que el usuario pueda elegir
+                        cuáles son sus favoritos. Los favoritos deberán guardarse en una lista donde se puedan
+                        almacenar datos persistentes, por lo tanto se debe usar localStorage. Por último, desde
+                        la sección de favoritos se pueden consultar los datos añadidos, así como eliminarlos.
+                        En mi caso es escogido una API de videojuegos por razones obvias, es mi hobby número 1
+                        y en cuanto me dan a escoger un tema libre, mi tema elegido suele ser videojuegos :)
+                    </p>
+                    <h2>¿Qué te ha parecido el proyecto?</h2>
+                    <p>He disfrutado mucho realizando esta web (en ocasiones me he sentido workaholic incluso),
+                        no es postureo barato, realmente lo he hecho. Tenía algo de experiencia en Desarrollo
+                        web, pero muchos de esos conocimientos se ha quedado enterrados. Este proyecto me ha
+                        ayudado muchísimo a refrescar algunos conceptos y a aprender de cero otros muchos. por
+                        otra parte, también me siento humilde, pienso que construir una web como esta es apenas
+                        un 5% (o menos) de la profesión, con lo cual tengo todo por aprender. Pero me está gustado
+                        mucho (volver a) recorrer este camino :)
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer_content">(C) 2022 Katia Úbeda. Es broma. No tiene copyright. Se puede plagiar :)</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

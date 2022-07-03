@@ -1,0 +1,506 @@
+@font-face {
+    font-family: Alien Remix;
+    src: url("fonts/Alien\ Remix.ttf");
+  }
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #333;
+    margin: 0;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1500px;
+    background-color: #444;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header_title {
+    color: #ccc;
+    font-family: 'Alien Remix', cursive;
+    font-size: 50px;
+    font-weight: 200;
+    margin: 10px;
+    cursor: pointer;
+}
+
+header p {
+    font-size: 16px;
+    padding-right: 50px;
+    color: #ccc;
+}
+
+@media (max-width: 1000px) {
+    header p {
+        display: none;
+    }
+
+    .header_title {
+        font-size: 26px;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    display: none;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 3px;
+    height: 30px;
+}
+
+.mobile-menu .sidebar_link {
+    color: #ccc;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.mobile-menu .sidebar_link:hover, .mobile-menu .sidebar_link_selected {
+    color: #333;
+    background-color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+aside {
+    max-width: 220px;
+    min-width: 220px;
+    background-color: #222;
+    padding: 10px;
+}
+
+aside .sidebar_link {
+    color: #ccc;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+aside .sidebar_link:hover,aside .sidebar_link_selected {
+    color: #333;
+    background-color: #aaa;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.sibedar_filters {
+    transition: 0.3s;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.sidebar_filters_title {
+    color: #777;
+    padding: 3px 20px;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.sidebar_link_mini {
+    color: #ccc;
+    display: block;
+    padding: 3px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar_link_mini:hover, .sidebar_link_mini_selected {
+    color: #333;
+    display: block;
+    background-color: #aaa;
+    padding: 3px 30px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    .sibedar_filters {
+        position: absolute;
+        right: 0px;
+        max-height: 0px;
+        background-color: #333;
+        z-index: 100;
+    }
+}
+
+.central {
+    display: flex;
+    min-height: 85vh;
+}
+
+.searchbar_container {
+    min-height: 70px;
+    width: 100%;
+}
+
+.searchbar {
+    width: 92%;
+    height: 40px;
+    color:#ccc;
+    border-radius: 20px;
+    border: 0;
+    padding: 0 40px;
+    font-size: 18px;
+    background: #222 url("images/lupa.svg") no-repeat 13px center;
+    transition: .5s;
+}
+
+.searchbar:hover {
+    color:#222;
+    background-color: #ccc;
+}
+
+.searchbar:focus {
+    outline-width: 0;
+    color:#222;
+    background-color: #ccc;
+}
+
+.searchbar::placeholder {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.loadbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.loadbox_icon {
+    width: 64px;
+    height: 64px;
+    background-image: url("images/loading.gif");
+    background-repeat: no-repeat;
+    background-size: 64px;
+}
+
+main {
+    background-color: #333;
+    color:#ccc;
+    width: 100%;
+    padding: 25px;
+}
+
+.main_content {
+    display: grid;
+    grid-gap: 25px 25px;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 10px 0;
+    }
+
+    .searchbar {
+        margin: 10px;
+        width: 69%;
+        font-size: 15px;
+    }
+
+    .searchbar_container {
+        min-height: 60px;
+    }
+    
+    .main_content {
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1200px) {
+    .main_content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main_content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    min-width: 250px;
+    max-width: 650px;
+    background-color:#444;
+    color:#ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #111;
+    overflow: hidden;
+}
+
+.card_img_container {
+    overflow: hidden;
+}
+
+.card .card_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .5s, opacity .5s;
+    cursor: pointer;
+}
+
+.card .card_img:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+.card .card_icon {
+    margin-left: 10px;
+}
+
+.card_title_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_title_container h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card_title_container .card_metacritic_good{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color:forestgreen;
+    border: 3px solid forestgreen;
+    height: 100%;
+}
+
+.card_title_container .card_metacritic_medium{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color:darkgoldenrod;
+    border: 3px solid darkgoldenrod;
+    height: 100%;
+}
+
+.card_title_container .card_metacritic_bad{
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color:brown;
+    border: 3px solid brown;
+    height: 100%;
+}
+
+.card p {
+    margin: 0 5px 0 0;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.card_star_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card p.card_star {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#search_more {
+    display: flex;
+    justify-content: center;
+}
+
+.search_more_link {
+    color: #333;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px 30px;
+    width: 150px;
+}
+
+.about_us {
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 3px;
+    height: 85vh;
+}
+
+.game_content {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 3px;
+}
+
+.game_content_info {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.game_content_image {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-color: rgba(40,40,40,0.8);
+    background-blend-mode:saturation;
+    background-size: contain;
+    -webkit-mask-image: radial-gradient(black, transparent);
+    mask-image: radial-gradient(black, transparent);
+    width: 100%;
+    height: 85vh;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    .game_content_image {
+        background-size: cover;
+        height: 60vh;
+        background-position: center;
+    }
+}
+
+.game_content_info_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game_content_info_star {
+    font-size: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.game_content_info h2 {
+    font-size: 50px;
+    margin: 5px 0;
+}
+
+.game_content_info h4 {
+    font-size: 20px;
+    margin: 0;
+    color:#777;
+    margin-top: 20px;
+}
+
+.game_content_info p {
+    margin: 0;
+}
+
+.game_content_info_sinopsis {
+    max-width: 920px;
+}
+
+.game_content_info_pics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game_content_info_pic {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+}
+
+@media (max-width: 800px) {
+    .game_content_info_pic {
+        width:100%;
+    }
+
+    .game_content_info h2 {
+        font-size: 35px;
+    }
+}
+
+.game_content_info_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0 15px;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .game_content_info_grid {
+        grid-template-columns: 1fr 1fr;
+        width: 800px;
+    }
+}
+
+.game_content_info .card_metacritic_good{
+    padding: 6px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 30px;
+    color:forestgreen;
+    border: 3px solid forestgreen;
+}
+
+.game_content_info .card_metacritic_medium{
+    padding: 6px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 30px;
+    color:darkgoldenrod;
+    border: 3px solid darkgoldenrod;
+}
+
+.game_content_info .card_metacritic_bad{
+    padding: 6px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 30px;
+    color:brown;
+    border: 3px solid brown;
+}
+
+@media (max-width: 800px) {
+    .about_us {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        padding: 3px;
+    }
+}
+
+.about_us h2, .about_us p {
+    opacity: 1;
+}
+
+.footer_content {
+    color:#ccc;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katia Player One</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monofett&family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="getFavorites()">
+    <div class="wrapper">
+        <header>
+            <h1 class="header_title" onclick="window.location.href = 'index.html'">KATIA PLAYER ONE</h1>
+            <p>Tu fuente de conocimiento de videojuegos</p>
+        </header>
+
+        <div class="mobile-menu">
+            <nav>
+                <a class="sidebar_link" id="sidebar_link_index_mobile" href="index.html">Inicio</a>
+                <a class="sidebar_link_selected" href="favorites.html">Favoritos</a>
+                <a class="sidebar_link" href="aboutus.html">Acerca de</a>
+                <a class="sidebar_link" id="sidebar_link_filters_mobile" href="#" onclick="toggleFilters()">Filtros</a>
+
+                <div class="sibedar_filters" id="sidebar_filters_mobile">
+                    <p class="sidebar_filters_title">Plataformas</p>
+                    <a class="sidebar_link_mini filter_4" href="index.html?filter=platform&filterId=4">PC</a>
+                    <a class="sidebar_link_mini filter_7" href="index.html?filter=platform&filterId=7">Nintendo Switch</a>
+                    <a class="sidebar_link_mini filter_18" href="index.html?filter=platform&filterId=18">PlayStation 4</a>
+                    <a class="sidebar_link_mini filter_1" href="index.html?filter=platform&filterId=1">Xbox One</a>
+                    <a class="sidebar_link_mini filter_21" href="index.html?filter=platform&filterId=21">Android</a>
+                    <a class="sidebar_link_mini filter_3" href="index.html?filter=platform&filterId=3">iOS</a>
+                    <p class="sidebar_filters_title">Géneros</p>
+                    <a class="sidebar_link_mini filter_action" href="index.html?filter=genre&filterId=action">Acción</a>
+                    <a class="sidebar_link_mini filter_strategy" href="index.html?filter=genre&filterId=strategy">Estrategia</a>
+                    <a class="sidebar_link_mini filter_role-playing-games-rpg" href="index.html?filter=genre&filterId=role-playing-games-rpg">RPG</a>
+                    <a class="sidebar_link_mini filter_shooter" href="index.html?filter=genre&filterId=shooter">Shooter</a>
+                    <a class="sidebar_link_mini filter_adventure" href="index.html?filter=genre&filterId=adventure">Aventura</a>
+                    <a class="sidebar_link_mini filter_puzzle" href="index.html?filter=genre&filterId=puzzle">Puzzle</a>
+                    <a class="sidebar_link_mini filter_racing" href="index.html?filter=genre&filterId=racing">Conducción</a>
+                    <a class="sidebar_link_mini filter_sports" href="index.html?filter=genre&filterId=sports">Deportes</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="central">
+            <aside>
+                <nav>
+                    <a class="sidebar_link" href="index.html">Inicio</a>
+                    <a class="sidebar_link_selected" href="favorites.html">Favoritos</a>
+                    <a class="sidebar_link" href="aboutus.html">Acerca de</a>
+                    <a class="sidebar_link" href="#" onclick="toggleFilters()">Filtros</a>
+                    <div class="sibedar_filters" id="sidebar_filters">
+                        <p class="sidebar_filters_title">Plataformas</p>
+                        <a class="sidebar_link_mini" id="filter_4" href="index.html?filter=platform&filterId=4">PC</a>
+                        <a class="sidebar_link_mini" id="filter_7" href="index.html?filter=platform&filterId=7">Nintendo Switch</a>
+                        <a class="sidebar_link_mini" id="filter_18" href="index.html?filter=platform&filterId=18">PlayStation 4</a>
+                        <a class="sidebar_link_mini" id="filter_1" href="index.html?filter=platform&filterId=1">Xbox One</a>
+                        <a class="sidebar_link_mini" id="filter_21" href="index.html?filter=platform&filterId=21">Android</a>
+                        <a class="sidebar_link_mini" id="filter_3" href="index.html?filter=platform&filterId=3">iOS</a>
+                        <p class="sidebar_filters_title">Géneros</p>
+                        <a class="sidebar_link_mini" id="filter_action" href="index.html?filter=genre&filterId=action">Acción</a>
+                        <a class="sidebar_link_mini" id="filter_strategy" href="index.html?filter=genre&filterId=strategy">Estrategia</a>
+                        <a class="sidebar_link_mini" id="filter_role-playing-games-rpg" href="index.html?filter=genre&filterId=role-playing-games-rpg">RPG</a>
+                        <a class="sidebar_link_mini" id="filter_shooter" href="index.html?filter=genre&filterId=shooter">Shooter</a>
+                        <a class="sidebar_link_mini" id="filter_adventure" href="index.html?filter=genre&filterId=adventure">Aventura</a>
+                        <a class="sidebar_link_mini" id="filter_puzzle" href="index.html?filter=genre&filterId=puzzle">Puzzle</a>
+                        <a class="sidebar_link_mini" id="filter_racing" href="index.html?filter=genre&filterId=racing">Conducción</a>
+                        <a class="sidebar_link_mini" id="filter_sports" href="index.html?filter=genre&filterId=sports">Deportes</a>
+                    </div>
+                    
+                </nav>
+            </aside>
+
+            <main>
+                <!--<div class="searchbar_container">
+                    <input class="searchbar" id="searchbar" type="text" placeholder="Busca aquí tus juegos favoritos" onkeypress="checkEnterPress(event)">
+                </div>-->
+                <div class="main_content" id="main_content">
+                    <div></div>
+                    <div>
+                        <p>Parece que todavía no has añadido ningún juego a tus favoritos... ¿A qué esperas?</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer_content">(C) 2022 Katia Úbeda. Es broma. No tiene copyright. Se puede plagiar :)</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
